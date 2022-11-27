@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'nutritionApp';
+  data:any;
+
+  getData(data:any){
+    this.data = data;
+    console.log('res' , data);
+  }
 }

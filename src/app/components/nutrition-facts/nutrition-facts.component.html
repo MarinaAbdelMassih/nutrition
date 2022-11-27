@@ -1,0 +1,162 @@
+<section class="performance-facts">
+  <header class="performance-facts__header">
+    <h1 class="performance-facts__title">Nutrition Facts</h1>
+  </header>
+  <table class="performance-facts__table" >
+    <thead>
+    <tr>
+      <th colspan="3" class="small-info">
+        Amount Per Serving
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th colspan="2">
+        <b>Calories</b>
+      </th>
+      <td>
+        <b>{{nutritionData.calories}}</b>
+
+      </td>
+    </tr>
+    <tr class="thick-row">
+      <td colspan="3" class="small-info">
+        <b>% Daily Value*</b>
+      </td>
+    </tr>
+    <tr>
+      <th  colspan="2">
+        <b>Total Fat</b>
+        {{math.round(nutritionData.totalNutrients.FAT.quantity)}} g
+      </th>
+      <td >
+        <b>   {{math.round(nutritionData.totalDaily.FAT.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr>
+      <td class="blank-cell">
+      </td>
+      <th>
+        Saturated Fat
+        9g
+      </th>
+      <td>
+        <b>22%</b>
+      </td>
+    </tr>
+    <tr>
+      <td class="blank-cell">
+      </td>
+      <th>
+        Trans Fat
+        0g
+      </th>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th colspan="2">
+        <b>Cholesterol</b>
+        {{math.round(nutritionData.totalNutrients.CHOLE.quantity)}} mg
+      </th>
+      <td >
+        <b> {{math.round(nutritionData.totalDaily.CHOLE.quantity)}}  %</b>
+
+      </td>
+    </tr>
+    <tr>
+      <th  colspan="2">
+        <b>Sodium</b>
+        {{math.round(nutritionData.totalNutrients.NA.quantity)}} mg
+      </th>
+      <td >
+        <b>  {{math.round(nutritionData.totalDaily.NA.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr>
+      <th  colspan="2">
+        <b>Total Carbohydrate</b>
+        {{math.round(nutritionData.totalNutrients.CHOCDF.quantity)}}  g
+      </th>
+      <td >
+        <b> {{math.round(nutritionData.totalDaily.CHOCDF.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr>
+      <td class="blank-cell">
+      </td>
+      <th  >
+        Dietary Fiber
+        {{math.round(nutritionData.totalNutrients.FIBTG.quantity)}} g
+      </th>
+      <td>
+        <b>  {{math.round(nutritionData.totalDaily.FIBTG.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr>
+      <td class="blank-cell">
+      </td>
+      <th >
+        Sugars
+        {{math.round(nutritionData.totalNutrients.SUGAR.quantity)}}  g
+      </th>
+      <td>
+      </td>
+    </tr>
+    <tr class="thick-end">
+      <th colspan="2">
+        <b>Protein</b>
+        {{math.round(nutritionData.totalNutrients.PROCNT.quantity)}}  g
+      </th>
+      <td  >
+        <b>    {{math.round(nutritionData.totalDaily.PROCNT.quantity)}}  %</b>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table class="performance-facts__table--grid" >
+    <tbody>
+    <tr>
+      <td colspan="2">
+        Vitamin A
+        {{math.round(nutritionData.totalNutrients.VITA_RAE.quantity)}}   mg
+      </td>
+      <td  >
+        <b>  {{math.round(nutritionData.totalDaily.VITA_RAE.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        Vitamin C
+        {{math.round(nutritionData.totalNutrients.VITC.quantity)}}  mg
+      </td>
+      <td>
+        <b>  {{math.round(nutritionData.totalDaily.VITC.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        Iron
+        {{math.round(nutritionData.totalNutrients.FE.quantity)}}  mg
+      </td>
+      <td>
+        <b>  {{math.round(nutritionData.totalDaily.FE.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr class="thin-end">
+      <td colspan="2">
+        Calcium
+        {{math.round(nutritionData.totalNutrients.CA.quantity)}}  mg
+      </td>
+      <td>
+        <b> {{math.round(nutritionData.totalDaily.CA.quantity)}} %</b>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    </tbody>
+  </table>
+  <p class="small-info">*Percent Daily Values are based on a 2000 calorie diet</p>
+</section>
