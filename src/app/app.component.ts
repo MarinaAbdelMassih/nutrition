@@ -8,9 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'nutritionApp';
   data:any;
+  showFlag?:boolean;
 
   getData(data:any){
     this.data = data;
     console.log('res' , data);
+  }
+  viewDetails(){
+    this.showFlag = true;
   }
 }

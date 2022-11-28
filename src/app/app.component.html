@@ -4,5 +4,6 @@
 <div *ngIf="data">
   <app-nutrition-result [ELEMENT_DATA]="data"></app-nutrition-result>
   <hr>
-  <app-nutrition-facts [nutritionData]="data"></app-nutrition-facts>
+  <button *ngIf="!showFlag" (click)="viewDetails()">Total Nutrition</button>
+  <app-nutrition-facts *ngIf="showFlag" [nutritionData]="data"></app-nutrition-facts>
 </div>
