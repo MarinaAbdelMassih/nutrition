@@ -8,6 +8,9 @@
     height: 250px;
     margin: auto;
     display: flex;
+    @media (max-width: 991px) {
+      width: 90%;
+    }
   }
 
   &__btn-container {
@@ -27,6 +30,7 @@
       height: 30px;
       cursor: pointer;
     }
+
     :disabled {
       background-color: gray;
       cursor: auto;

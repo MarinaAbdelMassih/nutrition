@@ -1,9 +1,11 @@
-<div *ngIf="!data">
-  <app-nutrition (dataForm)="getData($event)"></app-nutrition>
+<div *ngIf="!nutritionData">
+  <app-nutrition (dataForm)="getNutritionData($event)"></app-nutrition>
 </div>
-<div *ngIf="data">
-  <app-nutrition-result [ELEMENT_DATA]="data"></app-nutrition-result>
+<div *ngIf="nutritionData">
+  <app-nutrition-result [nutrition]="nutritionData"></app-nutrition-result>
   <hr>
-  <button *ngIf="!showFlag" (click)="viewDetails()">Total Nutrition</button>
-  <app-nutrition-facts *ngIf="showFlag" [nutritionData]="data"></app-nutrition-facts>
+  <div class="total-nutrition">
+    <button (click)="viewDetails()" *ngIf="!showFlag">Total Nutrition</button>
+    <app-nutrition-facts *ngIf="showFlag" [nutritionData]="nutritionData"></app-nutrition-facts>
+  </div>
 </div>

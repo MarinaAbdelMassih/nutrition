@@ -1,20 +1,22 @@
 import { Component } from '@angular/core';
+import { INutrition } from './shared/interfaces/nutrition';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'nutritionApp';
-  data:any;
-  showFlag?:boolean;
+  nutritionData?: INutrition;
+  showFlag?: boolean;
 
-  getData(data:any){
-    this.data = data;
-    console.log('res' , data);
+  getNutritionData(data: any) {
+    this.nutritionData = data;
+    console.log('res', data);
   }
-  viewDetails(){
+
+  viewDetails() {
     this.showFlag = true;
   }
 }

@@ -1,13 +1,14 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { INutrition } from '../../shared/interfaces/nutrition';
 
 @Component({
   selector: 'app-nutrition-result',
   templateUrl: './nutrition-result.component.html',
-  styleUrls: ['./nutrition-result.component.scss']
+  styleUrls: ['./nutrition-result.component.scss'],
 })
 export class NutritionResultComponent {
-  @Input() ELEMENT_DATA?: any;
-  dataSource = this.ELEMENT_DATA;
+
+  @Input() nutrition?: INutrition;
   math = Math;
 
 }

@@ -4,25 +4,31 @@
   float: left;
   width: 310px;
   padding: 0.5rem;
+
   table {
     border-collapse: collapse;
   }
 }
+
 .performance-facts__title {
   font-weight: bold;
   font-size: 2rem;
   margin: 0 0 0.25rem 0;
 }
+
 .performance-facts__header {
   border-bottom: 10px solid black;
   padding: 0 0 0.25rem 0;
   margin: 0 0 0.5rem 0;
+
   p {
     margin: 0;
   }
 }
+
 .performance-facts__table {
   width: 100%;
+
   thead tr {
     th,
     td {
@@ -31,6 +37,7 @@
       font-weight: bold;
     }
   }
+
   th,
   td {
     font-weight: normal;
@@ -39,15 +46,18 @@
     border-top: 1px solid black;
     white-space: nowrap;
   }
+
   td {
     &:last-child {
       text-align: right;
     }
   }
+
   .blank-cell {
     width: 1rem;
     border-top: 0;
   }
+
   .thick-row {
     th,
     td {
@@ -55,6 +65,7 @@
     }
   }
 }
+
 .small-info {
   font-size: 0.7rem;
 }
@@ -63,16 +74,19 @@
   @extend .performance-facts__table;
   border-bottom: 1px solid #999;
   margin: 0 0 0.5rem 0;
+
   thead {
     tr {
       border-bottom: 1px solid black;
     }
   }
+
   td {
     &:last-child {
       text-align: left;
     }
   }
+
   th,
   td {
     border: 0;
@@ -83,11 +97,6 @@
 .performance-facts__table--grid {
   @extend .performance-facts__table;
   margin: 0 0 0.5rem 0;
-  //td {
-  //  &:last-child {
-  //    //text-align: left;
-  //  }
-  //}
 }
 
 .text-center {

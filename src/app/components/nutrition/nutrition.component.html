@@ -1,12 +1,11 @@
 <div class="nutrition-container">
   <h1 class="nutrition-container__title">Nutrition App</h1>
-  <form class="row justify-content-center" [formGroup]="nutrition_form">
+  <form [formGroup]="nutrition_form" class="row justify-content-center">
     <div class="col-12">
-      <label></label>
-      <textarea name="name-input" row="10" cols="10"
-                class="form-control"  formControlName="foodData"></textarea>
+      <textarea class="form-control"
+                formControlName="foodData" name="name-input"></textarea>
       <div class="nutrition-container__btn-container">
-        <button [disabled]="!nutrition_form.valid" (click)="submit()">analyze</button>
+        <button (click)="submit()" [disabled]="!nutrition_form.valid">analyze</button>
       </div>
     </div>
   </form>

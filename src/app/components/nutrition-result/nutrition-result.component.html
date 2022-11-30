@@ -1,17 +1,22 @@
-<div class="nutrition-result" *ngIf="ELEMENT_DATA">
-  <div class="title">
-    <p>qty</p>
-    <p>unit</p>
-    <p>food</p>
-    <p>calories</p>
-    <p>totalWeight</p>
-  </div>
-  <div class="data" *ngFor="let item of ELEMENT_DATA.ingredients ">
-  <p *ngFor="let one of item.parsed ">{{one.quantity}}</p>
-  <p *ngFor="let one of item.parsed ">{{one.measure}}</p>
-  <p *ngFor="let one of item.parsed ">{{one.foodMatch}}</p>
-    <p>{{ELEMENT_DATA.calories}}</p>
-
-  <p *ngFor="let one of item.parsed ">{{math.round(one.weight)}}</p>
-  </div>
-</div>
+<table class="my-table">
+  <thead class="my-table headers">
+  <tr>
+    <th>Qty</th>
+    <th>Unit</th>
+    <th>Food</th>
+    <th>Calories</th>
+    <th>Weight</th>
+  </tr>
+  </thead>
+  <tbody class="my-table body">
+  <tr *ngFor="let item of nutrition?.ingredients">
+    <td *ngFor="let unit of item.parsed ">{{unit.quantity}}</td>
+    <td *ngFor="let unit of item.parsed ">{{unit.measure}}</td>
+    <td *ngFor="let unit of item.parsed ">{{unit.foodMatch}}</td>
+    <td *ngFor="let unit of item.parsed ">
+      {{math.round(unit.nutrients.ENERC_KCAL.quantity)}} kcal
+    </td>
+    <td *ngFor="let unit of item.parsed ">{{math.round(unit.weight)}} g</td>
+  </tr>
+  </tbody>
+</table>
