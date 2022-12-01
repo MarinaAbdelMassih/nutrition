@@ -11,9 +11,8 @@ export class AppComponent {
   nutritionData?: INutrition;
   showFlag?: boolean;
 
-  getNutritionData(data: any) {
+  getNutritionData(data: INutrition) {
     this.nutritionData = data;
-    console.log('res', data);
   }
 
   viewDetails() {

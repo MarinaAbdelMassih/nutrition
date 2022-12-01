@@ -13,7 +13,7 @@ export class NutritionComponent {
 
   nutrition_form: FormGroup;
   formValue: string[] | undefined;
-  data: any;
+  nutritionData: {} = {};
 
   constructor(private nutritionService: NutritionService, private fb: FormBuilder) {
     this.nutrition_form = this.fb.group({
@@ -24,12 +24,10 @@ export class NutritionComponent {
   submit() {
     this.formValue = this.nutrition_form.value.foodData.split('\n');
     this.formValueData.emit(this.formValue);
-    console.log('split', this.formValue);
     this.nutritionService.getNutritionDetails(this.formValue).subscribe(
       data => {
-        this.data = data;
+        this.nutritionData = data;
         this.dataForm.emit(data);
-        console.log(data);
       });
   }
 

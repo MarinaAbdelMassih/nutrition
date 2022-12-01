@@ -7,7 +7,7 @@ export interface INutrition {
     text: string, parsed: {
       food: string,
       foodId: string, foodMatch: string, measure: string, measureURI: string, nutrients: Nutrients, quantity: number, retainedWeight: number, status: string, weight: number
-    }[ ]
+    }[]
   }[];
   totalDaily: Nutrients;
   totalNutrients: Nutrients;

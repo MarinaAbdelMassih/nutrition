@@ -12,10 +12,6 @@ export class NutritionService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getNutritionData(ingredient: string[] | undefined) {
-    return this.httpClient.get(environment.baseUrl + `nutrition-data?app_id=${this.app_id}&app_key=${this.app_key}&ingr=${ingredient}`);
-  }
-
   getNutritionDetails(ingredient: string[] | undefined) {
     return this.httpClient.post(environment.baseUrl + `nutrition-details?app_id=${this.app_id}&app_key=${this.app_key}`, {
       title: 'cheese',
